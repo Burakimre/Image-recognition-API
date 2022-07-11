@@ -1,0 +1,102 @@
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
+		<a href="/logout" class="btn btn-outline-dark btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		{{#ifCond user.role '===' 'admin'}}
+		<div class="col-sm-6">
+		{{else}}
+		<div class="col-sm-12">
+		{{/ifCond}}
+		<div class="card">
+			<div class="card-body">
+				<h3><span class="fa fa-user"></span> Local</h3>
+
+				{{#if user.local.email }}
+					<p>
+						<strong>id</strong>: {{user._id}}<br>
+						<strong>email</strong>: {{user.local.email}}<br>
+						<strong>password</strong>: {{user.local.password}}
+					</p>
+
+					<a href="/unlink/local" class="btn btn-outline-dark">Unlink</a>
+				{{else}}
+					<a href="/connect/local" class="btn btn-outline-dark">Connect Local</a>
+				{{/if}}
+
+			</div>
+		</div>
+	</div>
+
+		{{#ifCond user.role '===' 'admin'}}
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+						<h3><span class="fa fa-user"></span> Management</h3>
+
+						<div class="list-group list-group-flush">
+							<a class="list-group-item list-group-item-action" href="/targets">Targets</a>
+							<a class="list-group-item list-group-item-action" href="/targets/create">Create a new target</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/ifCond}}
+	</div>
+
+		<div class="row">
+
+			<!-- GOOGLE INFORMATION -->
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+						<h3 class="text-danger"><span class="fab fa-google-plus-g"></span> Google+</h3>
+
+						<!-- check if the user has this token (is the user authenticated with this social account) -->
+						{{#if user.google.token}}
+							<p>
+								<strong>id</strong>: {{user.google.id}}<br>
+								<strong>token</strong>: {{user.google.token}}<br>
+								<strong>email</strong>: {{user.google.email}}<br>
+								<strong>name</strong>: {{user.google.name}}
+							</p>
+
+							<a href="/unlink/google" class="btn btn-danger">Unlink</a>
+						{{else}}
+							<a href="/connect/google" class="btn btn-danger">Connect Google</a>
+						{{/if}}
+
+					</div>
+				</div>
+			</div>
+
+			<!-- FACEBOOK INFORMATION -->
+			<div class="col-sm-6">
+				<div class="card">
+					<div class="card-body">
+						<h3 class="text-primary"><span class="fab fa-facebook-f"></span> Facebook</h3>
+
+						<!-- check if the user has this token (is the user authenticated with this social account) -->
+						{{#if user.facebook.token}}
+							<p>
+								<strong>id</strong>: {{user.facebook.id}}<br>
+								<strong>token</strong>: {{user.facebook.token}}<br>
+								<strong>email</strong>: {{user.facebook.email}}<br>
+								<strong>name</strong>: {{user.facebook.name}}<br>
+							</p>
+
+							<a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
+						{{else}}
+							<a href="/connect/facebook" class="btn btn-primary">Connect Facebook</a>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

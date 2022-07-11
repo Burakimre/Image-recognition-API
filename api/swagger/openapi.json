@@ -1,0 +1,368 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "WEBS5 API",
+    "description" : "WEBS5 API",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "https://limitless-castle-74181.herokuapp.com"
+  } ],
+  "paths" : {
+    "/api/targets" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "targetName" : {
+                    "type" : "string"
+                  },
+                  "targetDescription" : {
+                    "type" : "string"
+                  },
+                  "api_key" : {
+                    "type" : "string"
+                  },
+                  "image_url" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\r\n   \"targetName\":\"\",\r\n   \"targetDescription\":\"\",\r\n   \"image_url\":\"\",\r\n   \"api_key\":\"\"\r\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}/submission/{submissionId}/tags" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "401" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}/submission/{submissionId}" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "401" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}/submission" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "api_key" : {
+                    "type" : "string"
+                  },
+                  "image_url" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\r\n    \"image_url\":\"\",\r\n    \"api_key\":\"\"\r\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "401" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}/delete" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "api_key" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\r\n   \"api_key\":\"\"\r\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "401" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/submissions/{submissionId}/delete" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "api_key" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\r\n    \"api_key\":\"\"\r\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "401" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/submissions" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}/submission/{submissionId}/tags/{tagName}" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "401" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/targets/{targetId}/submissions" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    },
+    "/api/submissions/{submissionId}" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "404" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://limitless-castle-74181.herokuapp.com"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://limitless-castle-74181.herokuapp.com"
+      } ]
+    }
+  }
+}

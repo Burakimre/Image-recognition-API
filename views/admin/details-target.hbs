@@ -1,0 +1,77 @@
+<div class="container">
+	<div class="page-header text-center">
+		<a href="/targets" class="float-left btn"><span class="fa fa-angle-left"></span> Back</a>
+		<h1><span class="fas fa-bullseye"></span> Target details</h1>
+		<h3 class="text-muted">{{ target.name}}</h3>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-6">
+			<h3 class="text-muted">Details</h3>
+			<dl class="row">
+				<dt class="col-sm-3">Target</dt>
+				<dd class="col-sm-9">
+					<img class="thumbnail" src="{{target.imageUrl}}" alt="{{target.name}}"/>
+				</dd>
+				<dt class="col-sm-3">Description</dt>
+				<dd class="col-sm-9">{{target.description}}</dd>
+				<dt class="col-sm-3">Created on</dt>
+				<dd class="col-sm-9">{{target.createdAt}}</dd>
+			</dl>
+		</div>
+		<div class="col-sm-6">
+			<h3 class="text-muted">Submissions</h3>
+			<div class="table-scroll">
+				<table class="table">
+					<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Submitted by</th>
+						<th scope="col">Match score (%)</th>
+					</tr>
+					</thead>
+					<tbody>
+					{{#each target.submissions}}
+						<tr>
+							<td class="thumbnail"><img src="{{this.imageUrl}}" alt="{{this.name}}"/></td>
+							<td class="align-middle">{{this.user.email}}</td>
+							<td class="align-middle">{{this.score}}</td>
+							<td>
+								<form action="/api/submissions/{{this.id}}/delete" method="POST">
+									<button class="btn btn-danger" type="submit">
+										<span class="fas fa-trash"></span>
+									</button>
+								</form>
+							</td>
+						</tr>
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-9 col-lg-6">
+			<h3 class="text-muted">Tags</h3>
+			<div class="table-scroll">
+				<table class="table">
+					<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Match</th>
+					</tr>
+					</thead>
+					<tbody>
+					{{#each target.tags}}
+						<tr>
+							<td class="align-middle">{{this.tag}}</td>
+							<td class="align-middle">{{this.confidence}}</td>
+						</tr>
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

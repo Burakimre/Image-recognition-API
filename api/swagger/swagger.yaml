@@ -1,0 +1,112 @@
+openapi: 3.0.1
+info:
+  title: WEBS5 API
+  description: Available endpoints of the WEBS5 API
+  version: '1.0'
+servers:
+  - url: 'https://limitless-castle-74181.herokuapp.com'
+paths:
+  /api/targets/5e891b63d4387800177e68c6:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    servers:
+      - url: 'https://limitless-castle-74181.herokuapp.com'
+  /api/targets/5e891b63d4387800177e68c6/submissions/5e891b8ed4387800177e695f/tags/skyscraper:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    servers:
+      - url: 'https://limitless-castle-74181.herokuapp.com'
+  /api/targets/5e891b63d4387800177e68c6/submissions/5e891b8ed4387800177e695f:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    servers:
+      - url: 'https://limitless-castle-74181.herokuapp.com'
+  /api/targets/:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: offset
+          in: query
+          schema:
+            type: string
+          example: '0'
+        - name: limit
+          in: query
+          schema:
+            type: string
+          example: '5'
+        - name: name
+          in: query
+          allowEmptyValue: true
+          schema:
+            type: string
+        - name: description
+          in: query
+          allowEmptyValue: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    servers:
+      - url: 'https://limitless-castle-74181.herokuapp.com'
+  /api/targets/5e891b63d4387800177e68c6/submissions:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                image_url:
+                  type: string
+            examples:
+              '0':
+                value: '{ "image_url": "https://i.imgur.com/YiB0qoj.jpg" }'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    servers:
+      - url: 'https://limitless-castle-74181.herokuapp.com'
+  /api/targets/5e891b63d4387800177e68c6/submissions/5e891b8ed4387800177e695f/tags:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://limitless-castle-74181.herokuapp.com'
+    servers:
+      - url: 'https://limitless-castle-74181.herokuapp.com'

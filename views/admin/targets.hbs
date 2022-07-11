@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="page-header text-center">
+		<a href="/profile" class="float-left btn"><span class="fa fa-angle-left"></span> Back</a>
+		<h1><span class="fas fa-bullseye"></span> Targets</h1>
+	</div>
+
+	<table class="table">
+		<a href="/targets/new" class="btn btn-primary">Create</a>
+		<thead>
+		<tr>
+			<th scope="col"></th>
+			<th scope="col">Name</th>
+			<th scope="col">Created on</th>
+			<th scope="col">Actions</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each targets}}
+			<tr>
+				<td class="thumbnail"><img src="{{this.imageUrl}}" alt="{{this.name}}"/></td>
+				<td class="align-middle">{{this.name}}</td>
+				<td class="align-middle">{{this.createdAt}}</td>
+				<td class="align-middle">
+					<a href="/targets/{{this.id}}" class="btn btn-primary">
+						<span class="fas fa-eye"></span>
+					</a>
+					<a href="/targets/{{this.id}}/edit" class="btn btn-warning">
+						<span class="fas fa-edit"></span>
+					</a>
+					<form action="/api/targets/{{this.id}}/delete" method="POST">
+						<button class="btn btn-danger" type="submit">
+							<span class="fas fa-trash"></span>
+						</button>
+					</form>
+				</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+
+	{{#ifCond maxPages '>' 1}}
+		<nav>
+			<ul class="pagination justify-content-center">
+				{{#each pagination}}
+					<li class="page-item {{#if this.isActive}}disabled{{/if}} {{#ifCond this.url '===' undefined}}disabled{{/ifCond}}">
+						<a class="page-link" href="{{this.url}}">{{this.label}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</nav>
+	{{/ifCond}}
+</div>

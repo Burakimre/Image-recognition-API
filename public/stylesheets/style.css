@@ -1,0 +1,49 @@
+.body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.alert-top {
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+  border-top: none!important;
+}
+
+.page-header{
+  margin-bottom: 25px;
+}
+
+.row {
+  margin-top: 15px;
+}
+
+.table .thumbnail {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  width: 96px;
+  height: 96px;
+}
+
+.table .thumbnail img {
+  max-width: 96px;
+  max-height: 96px;
+  object-fit: cover;
+}
+
+dl .thumbnail {
+  max-width: 256px;
+  max-height: 256px;
+  object-fit: cover;
+}
+
+
+.table-scroll {
+  height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
